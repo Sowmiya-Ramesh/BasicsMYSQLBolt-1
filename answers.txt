@@ -1,0 +1,36 @@
+SQL Lesson 1: SELECT queries 101
+
+1.	SELECT title FROM movies;
+2.	SELECT director FROM movies;
+3.	SELECT title,director FROM movies;
+4.	SELECT * FROM movies;
+
+SQL Lesson 2: Queries with constraints (Pt. 1)
+
+1.	SELECT title FROM movies where id=6 ;
+2.	SELECT title FROM movies where year between 2000 and 2010 ;
+3.	SELECT title FROM movies where year NOT between 2000 and 2010 ;
+4.	SELECT title,year FROM movies where id between 1 and 5 ;
+
+SQL Lesson 3: Queries with constraints (Pt. 2)
+
+1.	SELECT * FROM movies where title LIKE "%Toy Story%";
+2.	SELECT * FROM movies where director LIKE "John Lasseter";
+3.	SELECT title, director FROM movies where Director not like "John Lasseter";
+4.	SELECT * FROM movies where title like "%Wall%";
+
+SQL Lesson 4: Filtering and sorting Query results
+
+1.	SELECT distinct director FROM movies order by director;
+2.	SELECT * FROM movies order by year desc limit 4;
+3.	SELECT * FROM movies order by title asc limit 5;
+4.	SELECT * FROM movies order by title asc limit 5 offset 5;
+
+SQL Review: Simple SELECT Queries
+
+1.	 SELECT city,population FROM north_american_cities where country like "canada";
+2.	SELECT city,population FROM north_american_cities where  country like "United States" order by latitude desc;
+3.	SELECT * FROM North_american_cities WHERE Longitude < -87.69 ORDER BY Longitude ASC;
+4.	SELECT * FROM North_american_cities WHERE country like "mexico" ORDER BY population desc limit 2;
+5.	SELECT * FROM North_american_cities WHERE country like "united states" ORDER BY population desc limit 2 offset 2;
+
